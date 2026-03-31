@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Recipe - 조리식품 레시피</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 헤더 영역 -->
+    <header class="header">
+        <div class="container header-content">
+            <h1 class="logo"><i class="fa-solid fa-leaf"></i> Fresh Recipe</h1>
+            
+            <!-- 검색 영역 -->
+            <div class="search-container">
+                <select id="searchType" class="search-select">
+                    <option value="RCP_NM">메뉴명</option>
+                    <option value="RCP_PARTS_DTLS">재료명</option>
+                </select>
+                <input type="text" id="searchInput" class="search-input" placeholder="검색어를 입력하세요...">
+                <button id="searchBtn" class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 메인 컨텐츠 영역 -->
+    <main class="container">
+        <!-- 오늘의 추천 메뉴 섹션 (정적 템플릿 방식) -->
+        <div id="todayRecipeSection" class="today-recipe-section">
+            <h2 class="section-title"><i class="fa-solid fa-star"></i> 오늘의 추천 메뉴</h2>
+            <div class="today-container">
+                <!-- 점심 추천 카드 템플릿 -->
+                <div id="lunchRecipeCard" class="today-card lunch-card loading">
+                    <img src="" alt="" class="today-img">
+                    <div class="today-info">
+                        <div style="display: flex; gap: 8px;">
+                            <span class="badge lunch"><i class="fa-solid fa-sun"></i> 점심 추천</span>
+                            <span class="badge category" style="background-color: var(--secondary-color); color: var(--primary-color);">로딩 중...</span>
+                        </div>
+                        <h3 class="today-title">맛있는 점심을 준비 중입니다...</h3>
+                        <p class="today-desc" style="font-size: 0.9rem;">잠시만 기다려 주세요.</p>
+                        <div class="card-stats" style="border: none; margin-top: auto; padding-top: 10px;">
+                            <span><i class="fa-solid fa-fire"></i> -- kcal</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 저녁 추천 카드 템플릿 -->
+                <div id="dinnerRecipeCard" class="today-card dinner-card loading">
+                    <img src="" alt="" class="today-img">
+                    <div class="today-info">
+                        <div style="display: flex; gap: 8px;">
+                            <span class="badge dinner"><i class="fa-solid fa-moon"></i> 저녁 추천</span>
+                            <span class="badge category" style="background-color: var(--secondary-color); color: var(--primary-color);">로딩 중...</span>
+                        </div>
+                        <h3 class="today-title">특별한 저녁을 준비 중입니다...</h3>
+                        <p class="today-desc" style="font-size: 0.9rem;">잠시만 기다려 주세요.</p>
+                        <div class="card-stats" style="border: none; margin-top: auto; padding-top: 10px;">
+                            <span><i class="fa-solid fa-fire"></i> -- kcal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 레시피 목록 섹션 -->
+        <section class="recipe-list-section">
+            <h2 id="recipeListTitle" class="section-title"><i class="fa-solid fa-utensils"></i> 레시피 탐색</h2>
+            <!-- 검색 결과 없음 메시지 -->
+            <div id="noResultMessage" class="no-result" style="display: none;">
+                <i class="fa-solid fa-face-sad-tear"></i>
+                <p>검색 결과가 없습니다.</p>
+            </div>
+            
+            <!-- 레시피 카드 그리드 -->
+            <div id="recipeGrid" class="recipe-grid">
+                <!-- Cards will be dynamically added here -->
+            </div>
+            
+            <!-- 하단 로딩 스피너 -->
+            <div id="loadingSpinner" class="loading-spinner" style="display: none;">
+                <div class="spinner"></div>
+                <p id="loadingText">추가 레시피를 가져오는 중입니다...</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Fresh Recipe (Food Safety Korea API 활용). All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 레시피 상세 모달 -->
+    <div id="recipeModal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <button id="modalCloseBtn" class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-body" id="modalBody">
+                <!-- Modal content injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery 라이브러리 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Custom 스크립트 -->
+       
+    <script type="module" src="script.js"></script>
+ 
+</body>
+</html>
