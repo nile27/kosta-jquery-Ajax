@@ -37,31 +37,41 @@
             <div class="today-container">
                 <!-- 점심 추천 카드 템플릿 -->
                 <div id="lunchRecipeCard" class="today-card lunch-card loading">
-                    <img src="" alt="" class="today-img">
-                    <div class="today-info">
-                        <div style="display: flex; gap: 8px;">
+                    <div class="today-img-wrapper">
+                        <img src="" alt="" class="today-img">
+                        <div class="today-overlay">
                             <span class="badge lunch"><i class="fa-solid fa-sun"></i> 점심 추천</span>
-                            <span class="badge category" style="background-color: var(--secondary-color); color: var(--primary-color);">로딩 중...</span>
+                            <span class="badge category" style="background: rgba(255,255,255,0.9); color: var(--primary-color);">로딩 중...</span>
                         </div>
+                    </div>
+                    <div class="today-info">
                         <h3 class="today-title">맛있는 점심을 준비 중입니다...</h3>
-                        <p class="today-desc" style="font-size: 0.9rem;">잠시만 기다려 주세요.</p>
-                        <div class="card-stats" style="border: none; margin-top: auto; padding-top: 10px;">
-                            <span><i class="fa-solid fa-fire"></i> -- kcal</span>
+                        <p class="today-desc">잠시만 기다려 주세요.</p>
+                        <div class="card-footer">
+                            <div class="card-stats">
+                                <span><i class="fa-solid fa-fire"></i> -- kcal</span>
+                            </div>
+                            <i class="fa-solid fa-chevron-right" style="color: var(--slate-200);"></i>
                         </div>
                     </div>
                 </div>
                 <!-- 저녁 추천 카드 템플릿 -->
                 <div id="dinnerRecipeCard" class="today-card dinner-card loading">
-                    <img src="" alt="" class="today-img">
-                    <div class="today-info">
-                        <div style="display: flex; gap: 8px;">
+                    <div class="today-img-wrapper">
+                        <img src="" alt="" class="today-img">
+                        <div class="today-overlay">
                             <span class="badge dinner"><i class="fa-solid fa-moon"></i> 저녁 추천</span>
-                            <span class="badge category" style="background-color: var(--secondary-color); color: var(--primary-color);">로딩 중...</span>
+                            <span class="badge category" style="background: rgba(255,255,255,0.9); color: var(--primary-color);">로딩 중...</span>
                         </div>
+                    </div>
+                    <div class="today-info">
                         <h3 class="today-title">특별한 저녁을 준비 중입니다...</h3>
-                        <p class="today-desc" style="font-size: 0.9rem;">잠시만 기다려 주세요.</p>
-                        <div class="card-stats" style="border: none; margin-top: auto; padding-top: 10px;">
-                            <span><i class="fa-solid fa-fire"></i> -- kcal</span>
+                        <p class="today-desc">잠시만 기다려 주세요.</p>
+                        <div class="card-footer">
+                            <div class="card-stats">
+                                <span><i class="fa-solid fa-fire"></i> -- kcal</span>
+                            </div>
+                            <i class="fa-solid fa-chevron-right" style="color: var(--slate-200);"></i>
                         </div>
                     </div>
                 </div>
