@@ -85,7 +85,7 @@ $(document).ready(function () {
         isLoading = true;
         $('#loadingSpinner').fadeIn(200).addClass('visible');
 
-        let apiUrl = `http://openapi.foodsafetykorea.go.kr/api/${API_KEY}/${SERVICE_ID}/${DATA_TYPE}/${startIndex}/${endIndex}`;
+        let apiUrl = `https://openapi.foodsafetykorea.go.kr/api/${API_KEY}/${SERVICE_ID}/${DATA_TYPE}/${startIndex}/${endIndex}`;
 
         if (searchKeyword !== '') {
             apiUrl += `/${searchType}=${encodeURIComponent(searchKeyword)}`;
