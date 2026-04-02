@@ -1,7 +1,8 @@
 # 🥗 Fresh Recipe — jQuery & AJAX 활용 프로젝트 발표
 
 > **조리식품 레시피 DB** 오픈 API를 jQuery와 AJAX로 연동한 레시피 탐색 웹 서비스
-
+> 
+> 🚀 **배포 주소:** [https://nile27.github.io/kosta-jquery-Ajax/](https://nile27.github.io/kosta-jquery-Ajax/)
 ---
 
 ## 📌 목차
